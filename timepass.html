@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Timepass</title>
+  <style>
+#canvas{
+  width:220px;
+}
+
+  </style>
+  </head>
+    <body>
+      <h1>Welcome to html. this is a timepass snippet.</h1>
+      <form action="" method="">
+        <tr>
+          <td>
+            <input
+              type="text"
+              autofocus
+              name="username"
+              value=""
+              required
+              placeholder="Name"
+              style="background-color: rgb(195, 144, 243)"
+              maxlength="100"
+            />
+          </td>
+          <td>
+            <input
+              required
+              type="number"
+              name="age"
+              placeholder="Age"
+              style="background-color: aquamarine"
+              min="13"
+              max="130"
+            />
+          </td>
+          <td>
+            <input
+              required
+              type="email"
+              name="email"
+              placeholder="EMAIL"
+              style="background-color: antiquewhite"
+            />
+          </td>
+          <td><input type="submit" value="login" /></td>
+        </tr>
+      </form>
+      <form>
+        <tr>
+          <td>
+            <input type="date" name="dob" placeholder="Date of birth" />
+          </td>
+          <td>
+            <input
+              type="number"
+              step="10"
+              name="de"
+              placeholder="Number"
+              minlength="10"
+              maxlength="112"
+            />
+          </td>
+          <td><input type="range" name="gard" /></td>
+          <output for="range" name="level">0</output
+          >/5
+          <td><input type="color" name="col" /></td>
+          <label for="points">Points (between 0 & 100)</label>
+          <!---what is this?-->
+          <br /><input
+            type="range"
+            id="points"
+            name="points"
+            min="0"
+            max="100"
+          />
+        </tr>
+        <tr>
+          <td><input name="se" type="search" /></td>
+          <td><input type="tel" name="tel" pattern="[6-9][0-9]{9}" /></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              list="co"
+              name="country"
+              id="country"
+              placeholder="country"
+            />
+            <datalist id="co">
+              <option value="Australia"></option>
+              <option value="America"></option>
+              <option value="Edge"></option>
+              <option value="Firefox"></option>
+              <option value="Chrome"></option>
+              <option value="Opera"></option>
+              <option value="Safari"></option>
+            </datalist>
+            <label for="browser"></label>
+            <input
+              list="browsers"
+              name="browser"
+              id="browser"
+              placeholder="Choose your browser from the list:"
+            />
+            <datalist id="browsers">
+              <option value="Edge"></option>
+              <option value="Firefox"></option>
+              <option value="Chrome"></option>
+              <option value="Opera"></option>
+              <option value="Safari"></option>
+            </datalist>
+
+            <input type="submit" />
+          </td>
+        </tr>
+      </form>
+      <br /><br />
+      <canvas
+        id="test"
+        width="200"
+        height="200"
+        style="background-color: black"
+      ></canvas
+      ><br />
+      <fieldset id="canvas"><legend create profile> canavs</legend>
+        <div>
+        <canvas
+              id="test"
+              width="200"
+              height="200"
+              style="background-color: black"
+            ></canvas>
+          </div>
+          </fieldset>
+    </body>
+  </head>
+</html>

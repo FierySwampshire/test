@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		
+				function displaydel(){
+
+		document.write("id : " + this.id + "<br>");
+		document.write("bname : " + this.bname + "<br>");
+		document.write("auther : " + this.auther + "<br>");
+		document.write("price : " + this.price + "<br>");
+
+		}
+
+
+
+
+
+		// function constructer
+		function Book(id,bname,auther,price){
+			this.id=id;
+			this.bname=bname;
+			this.auther=auther;
+			this.price=price;
+
+			this.display1=displaydel;
+					// this.display=displaydel();  // this will show undefined
+
+			this.display2=function(){
+					document.write("id : " + this.id + "<br>");
+					document.write("price : " + this.price + "<br>");
+			}
+
+			this.incrPrice = function(per){
+				this.price = this.price + (this.price * (per/100))
+			}
+		}
+
+
+		 var b1 = new Book (101,"core java","xyz",450);    //Book is function
+
+		// document.write("id : " + b1.id + "<br>");
+		// document.write("bname : " + b1.bname + "<br>");
+		// document.write("auther : " + b1.auther + "<br>");
+		// document.write("price : " + b1.price + "<br>");
+
+		// b1.price = 600;   // change the price (java script all prop are read/write)
+		// document.write("price : " + b1.price + "<br>");
+
+// OR
+
+		b1.display1();
+		document.write("<br>")
+		b1.display2();
+		b1.incrPrice(5);
+		b1.display1();
+
+
+
+
+
+
+
+		// document.write("<br>");
+
+		// var b2 = new Book (102,"core servlets","pqr",550);
+
+		// document.write("id : " + b2.id + "<br>");
+		// document.write("bname : " + b2.bname + "<br>");
+		// document.write("auther : " + b2.auther + "<br>");
+		// document.write("price : " + b2.price + "<br>");
+
+
+	</script>
+</head>
+<body>
+
+<p>
+	<br><br><br><br><br><br>
+		user defined objects
+			4 ways :
+				2 ways :
+					-function construcetr
+					-object initializer
+		
+
+</p>
+
+</body>
+</html>

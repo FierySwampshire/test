@@ -1,0 +1,15 @@
+{
+    "name":"siddhant",
+    "prn":1,
+    "address":"pune",
+    "contact":{
+        "phone":2617869,
+        "email":"sid0308v@gmail.com"
+    }
+
+}
+// how to import a json file in your javascript program? var student = require("student.json")
+// jsonis a exchange format. for communicating. between server client. Eg, a website in a browser, whis is a client. they must agree to some standard data. 
+// json is a data excahange format, similarly is xml.  json has key value pair.
+// JSON.parse("") json to object
+// stringify("") object to json

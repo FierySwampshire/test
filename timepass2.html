@@ -7,7 +7,7 @@
     <title>Timepass 2</title>
     <script>
         //function expression
-        var f1 = function (a, b, c) { };//scopes of vars: local and global
+        // var f1 = function (a, b, c) { };//scopes of vars: local and global
         //predefined functons: isFinite(), isNAN(), parseInt(), parseFloat()
         //predefined objects : string, math, date, array, Number, Boolean
         //every object exposes props and methods
@@ -15,40 +15,52 @@
         //user defined objects - 4 wys, mam will teach 2 wways
         //2 ways- 1. function constructor   2.Object initialiser
         //function cons
-        // function Book(id, bname, author, price) {
-        //     this.id = id;
-        //     this.bname = bname;
-        //     this.author = author;
-        //     this.price = price;
-        // }
-        // var b1 = new Book(101, "Core Java", "Kishori S", 450);
-        // document.write("id: " + b1.id + "<br>Name of book: " + b1.bname + "<br>Name of author:" + b1.author + "<br>Price of the book: " + b1.price);
+        function Book(id, bname, author, price) {
+            this.id = id;
+            this.bname = bname;
+            this.author = author;
+            this.price = price;
+        }
+        var b1 = new Book(101, "Core Java", "Kishori S", 450);
+        document.write("id: " + b1.id + "<br>Name of book: " + b1.bname + "<br>Name of author:" + b1.author + "<br>Price of the book: " + b1.price);
         // var b2 = new Book();
         // b2.price = 600; b2.id = 102; b2.author = "Kumar S"; b2.bname = "Adv Java";
         // document.write("<br>id: " + b2.id + "<br>Name of book: " + b2.bname + "<br>Name of author:" + b2.author + "<br>Price of the book: " + b2.price);
-        // function newBook(id, bname, author, price) {
-        //     this.id = id;
-        //     this.bname = bname;
-        //     this.author = author;
-        //     this.price = price;
-        //     this.display = displayDetails;//connects displaydetails with the function
-        //     this.display2 = function () {
-        //         document.write("<br>id: " + this.id + "<br>Name of book: " + this.bname + "<br>Name of author:" + this.author + "<br>Price of the book: " + this.price);
+        function newBook(id, bname, author, price) {
+            this.id = id;
+            this.bname = bname;
+            this.author = author;
+            this.price = price;
+            this.display = displayDetails;//connects displaydetails with the function
+            this.display2 = function () {
+                document.write("<br>id: " + this.id + "<br>Name of book: " + this.bname + "<br>Name of author:" + this.author + "<br>Price of the book: " + this.price);
 
-        //     }
-        //     this.incrPrice = function(per){
-        //         this.price = this.price * pre/100;
-        //     }
-        // }
+            }
+            this.incrPrice = function(per){
+                this.price = this.price * pre/100;
+            }
+        }
 
-        // function displayDetails(){
-        //     document.write("<br>id: " + this.id + "<br>Name of book: " + this.bname + "<br>Name of author:" + this.author + "<br>Price of the book: " + this.price);
-        // }
-        // var nb1 = new newBook(103, "Javascript", "Ravi S", 200);
-        // document.write("id: " + nb1.id + "<br>Name of book: " + nb1.bname + "<br>Name of author:" + nb1.author + "<br>Price of the book: " + nb1.price);
+        function displayDetails(){
+            document.write("<br>id: " + this.id + "<br>Name of book: " + this.bname + "<br>Name of author:" + this.author + "<br>Price of the book: " + this.price);
+        }
+        var nb1 = new newBook(103, "Javascript", "Ravi S", 200);
+        document.write("id: " + nb1.id + "<br>Name of book: " + nb1.bname + "<br>Name of author:" + nb1.author + "<br>Price of the book: " + nb1.price);
+        var name =[a,b,c,d];
+        var stduent = new Array();
+        nb1.display();
+        nb1.display2();
+        var sum = (x,y) => x+y
+        var sqr = x => Math.pow(x,2)
+        var avg  = arr => { }
+        sum(10,30)
+        var opr= (str,cb)=>{ cb(str.split(",").sort())}
+        opr("Sid,verma",()=>{
+            
+        })
+        opr("anu,sfg",()=>{
 
-        // nb1.display()
-
+        })
         // function Person(first, last, age, gender, interests) {
         //     this.name = {
         //         first,

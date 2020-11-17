@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var value = 2568;
+        var sum = value.toString().split('').map(Number).reduce(function (a, b) {return a + b;}, 0);
+        var arr =[2,3,4,5]
+        console.log(arr.map(e => e*e).reduce((a,b)=>a+b))
+        var x = new Number();
+        console.log(sum);
+
+        sum = 0;
+
+        while (value) {
+            sum += value % 10;
+            value = Math.floor(value / 10);
+        }
+
+        console.log(sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+            var sum=0;
+            for( var i=0; i<arguments.length;i++){
+                sum+=arguments[i];
+                return sum;
+            }            
+            
+        }
+        function f1(i,j){
+            
+            if(i>0){
+                i--;
+                j*=j;
+                document.write("<br> i ="+i+", j = "+j);
+                f1(i,j);
+                
+            }
+            return j;
+        }
+        var a=10;
+        //function expression, anonymous function, does not have a name
+        var f2 = function(){
+            alert("in function!");
+        };
+        f2();
+        document.write("<br>"+typeof(f2));
+        var ad=function(a,b){return a+b};
+        document.write("<br>"+ad(5,4));
+        var sum=1;
+        function fct(i){
+            
+            if(i>1){
+               
+                sum*=i;
+                document.write("<br> i = "+i+" the prod = "+sum);
+                i--;
+                fct(i);
+            }
+            return sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <script>
+        document.write("Sum is "+add(10, 20,30,50)+"<br>");
+        document.write("the sum is "+add(20)+"<br>");
+        document.write("sum "+add(78,37,71));
+         document.write("the number is "+f1(10,8));
+        
+        document.write("<br>0 is finite: "+isFinite(0)+"<br> infinite is finite: "+isFinite(Infinity)+"<br>");
+       
+        document.write((0)+"<br>"+
+        isNaN('123')+"<br>"+
+        isNaN('hello')+"<br>"+
+        isNaN('2005/12/12')+"<br>"+
+        parseInt('0')+"<br>"+
+        parseInt('100')+"<br>"+
+        parseInt('100abc')+"<br>"+
+        parseInt('100.786376')+"<br>"+
+        parseInt('hjsdfhg100jhbgibig')+"<br>"+//nan
+        parseInt('100bhfbdsb100')+"<br>"+
+        parseFloat('1000.175798475'));
+        document.write("<br>the factorial of 3 is "+ fct(3));
+        // predefined object in javascript String Math Date Array Number Boolean;
+        var str = "hello world";
+        var str1= new String("hello world");
+        document.write(str.length +"<br>"+
+        str.charAt(7)+"<br>"+
+        str.indexOf("e")+"<br>"+
+        str.toUpperCase() +"<br>"+
+        str.toLowerCase() +"<br>");
+        //str.matc(regExpression)
+        //replace(regExpression, )
+        // str.write("Hello")+"<br>"+
+        // split("delimiterCharacter"[, limitInteger]) splits the string into array of string
+
+        
+        // var myString = "Anderson, Smith, Johnson, Washington";
+        // var myarr = myString.split()
+        // substr, substring , slice() all extract substring from superstring eg. str.slice(6) returns world and str.slice(0,1) returns h
+
+
+
+        //Math
+        // document.write(Math.PI+"<br>"+
+        // Math.SQRT1_2+"<br>");
+        var d1 = new Date();
+        document.write("<br>"+/*d1.getDate(year,month,day,hours,minutes,seconds, milliseconds)*/ Date.now() +"<br>"+
+        d1.valueOf()+"<br>"+
+        d1.getDate()+"<br>"+
+        d1.getFullYear()+"<br>"+
+        d1.getDay()+"<br>"+
+        d1.getMinutes()+"<br>"+
+        d1.getMonth());
+
+        //Array
+        // var arr1 = new Array();
+        // arr1[0]=100;
+        // arr1[1]="hello";
+        // arr1[2]=true;
+        // for(var z=0;z<arr1.length;z++) {
+        //     document.write(arr1[z]);
+        // }
+        
+        var arr3 = [10,20,30,"aaa","bbb",true,50];
+        for(var q=0;q<arr3.length;q++){
+            document.write(arr3[q]);
+        }
+        /*arr3.push(1);
+        arr3.push(2);
+        arr3.push(10,20,30);*/
+        // arr3.reverse
+
+
+    </script>
+</body>
+</html>

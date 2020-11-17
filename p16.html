@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(a){
+            var text = "";
+            for(var i=0; i<a; i++){
+                if(i%2==0)
+                text = text + "<br>"+i;
+
+            }
+            return text;
+        }
+        function f2(){
+            var num1=parseInt(document.getElementById("inp").value);
+            var text1=f1(num1);
+            document.getElementById("result").innerHTML=text1;
+
+        }
+    </script>
+</head>
+<body>
+    <script>
+        // f1(10);
+    </script>
+    <input  type="text" id="inp" onchange="f2()">
+
+    <span id="result"></span>
+</body>
+</html>

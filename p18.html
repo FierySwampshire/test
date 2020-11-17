@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=new Array();
+        var sum = 0;
+        var res= 1;
+        var flag = true;
+        function addDatatoArray(){
+            var x = document.getElementById("text").value;
+           // console.log(x)
+            if(x!=null && !isNaN(parseInt(x))) 
+                arr.push(parseInt(x));
+            flag = true; 
+           // console.log(arr);          
+        }
+        function findSum(){
+            if(flag==true){
+            for(var i=0;i<arr.length;i++){
+                sum=sum+arr[i];
+            }
+            flag = false;
+            console.log(sum);
+            sum=0}
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="text" onchange="addDatatoArray()">
+    <button onclick="findSum()">+</button>
+</body>
+</html>
